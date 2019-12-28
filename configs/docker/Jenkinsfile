@@ -3,7 +3,7 @@ node {
         // some block
         echo 'Build stage'
         catchError(message: 'Error found on build stage') {
-            sh label: '', script: './gradlew build'
+            sh label: '', script: 'ls'
         }
     }
 }
