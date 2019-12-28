@@ -1,7 +1,9 @@
-stage('build') {
-    // some block
-    echo 'Build stage'
-    catchError(message: 'Error found on build stage') {
-        sh label: '', script: './gradlew build'
+node {
+    stage('build') {
+        // some block
+        echo 'Build stage'
+        catchError(message: 'Error found on build stage') {
+            sh label: '', script: './gradlew build'
+        }
     }
 }
