@@ -11,6 +11,6 @@ node {
     }
     stage('deploy'){
         echo 'Deploy stage'
-        sh 'find . -type f -path \\*/modules/\\*/build/libs/*.jar -exec cp -v {} /var/liferay_deploy/.'
+        sh "find . -type f -path \\*/modules/\\*/build/libs/*.jar -exec cp -v {} /var/liferay_deploy/. ';'"
     }
 }
