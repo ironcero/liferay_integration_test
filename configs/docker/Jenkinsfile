@@ -1,9 +1,13 @@
 node {
+    stage('SCM') {
+        echo 'SCM stage'
+        git 'https://github.com/ironcero/liferay_integration_test.git'
+    }
     stage('build') {
         // some block
         echo 'Build stage'
         catchError(message: 'Error found on build stage') {
-            sh 'pwd'
+            sh './gradlew build'
         }
     }
 }
